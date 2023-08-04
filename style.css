@@ -1,0 +1,144 @@
+.hero-body.second {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 15px;
+}
+
+.hero-body .container {
+    max-width: 700px;
+}
+
+.hero-body .title {
+    color: hsl(192, 17%, 99%) !important;
+}
+
+.hero-body .subtitle {
+    color: hsl(192, 17%, 99%) !important;
+    padding-top: 2rem;
+    line-height: 1.5;
+}
+
+.blog-posts {
+    min-height: 100vh;
+    background: white;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+}
+
+.blog-posts article {
+    padding: 1.5rem;
+}
+
+.blog-posts .post img {
+    border-radius: 6px;
+}
+
+.blog-posts .post .post-category {
+    color: #3b7adf;
+}
+
+.blog-posts .post .post-title {
+    font-size: 2.2rem;
+}
+
+.blog-posts .post .post-excerpt {
+    line-height: 1.5rem;
+    letter-spacing: .03rem;
+    font-size: 1.2rem;
+    font-family: 'IBM Plex Serif', serif;
+    color: #92a3ab;
+}
+
+.blog-posts .post .featured .featured-image img {
+    height: 380px;
+}
+
+.va {
+    display: flex;
+    align-items: center;
+}
+
+.section .level {
+    padding: 1rem 1rem;
+}
+
+
+
+.mx-2 {
+    display: grid;
+    place-items: center;
+    padding: 3rem 1rem;
+}
+
+.slider {
+    height: 150px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(250px*12);
+    animation: scroll 40s linear infinite;
+}
+
+.slide-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px*6));
+    }
+}
+
+.slide {
+    height: 150px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+img {
+    width: 100%;
+    transition: transform 1s;
+}
+
+img:hover {
+    transform: translateZ(20px);
+}
+
+.slider:before,
+.slider:after {
+    position: absolute;
+    top: 0%;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+}
+
+.slider:before {
+    left: 0;
+    background: linear-gradient(to right, white 0%, transparent 100%);
+}
+
+.slider:after {
+    right: 0;
+    background: linear-gradient(to left, white 0%, transparent 100%);
+}
+
+footer li:before {
+    font-family: 'FontAwesome';
+    float: left;
+    margin-left: -1.5em;
+    color: #147efb;
+}
